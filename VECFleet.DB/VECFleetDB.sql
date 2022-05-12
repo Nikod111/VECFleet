@@ -22,3 +22,11 @@ CREATE TABLE Vehiculo (
 	[KMsRecorridos] [int] NOT NULL,
 	[KMsParaMantenimiento] [int] NOT NULL,
 );
+
+SET IDENTITY_INSERT [dbo].[Vehiculo] ON
+INSERT INTO [dbo].[Vehiculo] ([id], [TipoVehiculo], [CantidadRuedas], [Marca], [Modelo], [Patente], [NumeroChasis], [KMsRecorridos], [KMsParaMantenimiento]) VALUES (1, N'Automóvil', 4, N'SUZUKI', N'Santana', N'NVZ087', N'8A6MAVR76MA101547', 30000, 10000)
+INSERT INTO [dbo].[Vehiculo] ([id], [TipoVehiculo], [CantidadRuedas], [Marca], [Modelo], [Patente], [NumeroChasis], [KMsRecorridos], [KMsParaMantenimiento]) VALUES (2, N'Automóvil', 4, N'HONDA', N'City', N'AB123CD', N'8AWPB45Z27A338861', 90000, 30000)
+INSERT INTO [dbo].[Vehiculo] ([id], [TipoVehiculo], [CantidadRuedas], [Marca], [Modelo], [Patente], [NumeroChasis], [KMsRecorridos], [KMsParaMantenimiento]) VALUES (3, N'Automóvil', 4, N'HONDA', N'Civic', N'RIO2A18', N'8AWPB45Z27A338861', 20000, 40000)
+INSERT INTO [dbo].[Vehiculo] ([id], [TipoVehiculo], [CantidadRuedas], [Marca], [Modelo], [Patente], [NumeroChasis], [KMsRecorridos], [KMsParaMantenimiento]) VALUES (4, N'Automóvil', 4, N'FOCUS', N'Ford', N'AB123DC', N'8CHJA5010NP029646', 10000, 30000)
+INSERT INTO [dbo].[Vehiculo] ([id], [TipoVehiculo], [CantidadRuedas], [Marca], [Modelo], [Patente], [NumeroChasis], [KMsRecorridos], [KMsParaMantenimiento]) VALUES (5, N'Moto', 2, N'YAMAHA', N'Tricity 125', N'960GAO', N'8AWPB45Z0KA504819', 30000, 10000)
+SET IDENTITY_INSERT [dbo].[Vehiculo] OFF
