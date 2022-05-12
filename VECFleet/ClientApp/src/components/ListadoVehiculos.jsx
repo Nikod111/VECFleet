@@ -3,11 +3,18 @@ import CardVehiculo from './CardVehiculo';
 import { Container, Row } from 'react-bootstrap';
 import Swal from 'sweetalert2'
 import * as api from '../utils/api.js';
+import ModalEditVehiculo from './FormVehiculo/ModalEditVehiculo';
 
 const ListadoVehiculos = () => {
 
     const [list, setList] = useState([]);
     const [updateList, setUpdateList] = useState(false);
+
+    const [showModal, setShowModal] = useState(false);
+    const [dataModal, setDataModal] = useState({})
+
+    const handleCloseModal = () => {setShowModal(false)}
+    const handleOpenModal = () => {setShowModal(true)}
 
     useEffect(() => {
         api.getVehiculo().then((response) => {
@@ -16,7 +23,7 @@ const ListadoVehiculos = () => {
         .catch(error => {
             Swal.fire(
                 'Error',
-                '¡Hubo un problema al mostrar los vehículos!',
+                'Â¡Hubo un problema al mostrar los vehÃ­culos!',
                 'error'
             )
         })
@@ -33,10 +40,23 @@ const ListadoVehiculos = () => {
                         vehiculo={vehiculo}
                         setUpdateList={setUpdateList}
                         updateList={updateList}
+                        handleCloseModal={handleCloseModal}
+                        handleOpenModal={handleOpenModal}
+                        setDataModal={setDataModal}
                     />
                 ))
             }
             </Row>
+
+            <ModalEditVehiculo
+                showModal={showModal}
+                dataModal={dataModal}
+                setUpdateList={setUpdateList}
+                updateList={updateList}
+                handleCloseModal= {handleCloseModal}
+                handleOpenModal = {handleOpenModal}
+                setDataModal= {setDataModal}
+            />
 
         </Container>
     )

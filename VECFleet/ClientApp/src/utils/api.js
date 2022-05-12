@@ -13,3 +13,7 @@ export const createVehiculo = async (data) => {
 export const deleteVehiculo = async (id) => {
     return axios.delete(`${URL}/Delete/${id}`)
 }
+
+export const updateVehiculo = async (data) => {
+    return axios.put(`${URL}/Update`, data)
+}

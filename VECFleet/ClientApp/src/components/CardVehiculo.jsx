@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import './styles/styles.css'
 import * as api from '../utils/api.js';
 
-const CardVehiculo = ({ vehiculo, setUpdateList, updateList}) => {
+const CardVehiculo = ({ vehiculo, setUpdateList, updateList, handleCloseModal, handleOpenModal, setDataModal}) => {
 
     const handleDelete = async () => {
 
@@ -42,6 +42,11 @@ const CardVehiculo = ({ vehiculo, setUpdateList, updateList}) => {
           })
     }
 
+    const handleEdit = () => {
+        handleOpenModal();
+        setDataModal(vehiculo)
+    }
+
     return (
         <div className="col-4 mb-3">
             <Card>
@@ -56,6 +61,7 @@ const CardVehiculo = ({ vehiculo, setUpdateList, updateList}) => {
                         <ListGroupItem><strong>KMs para mantenimiento: </strong>{vehiculo.KMsParaMantenimiento}</ListGroupItem>
                     </ListGroup>
                     <button className="btn btn-danger me-2" onClick={handleDelete}>Eliminar</button>
+                    <button className="btn btn-primary me-2" onClick={handleEdit}>Editar</button>
                 </Card.Body>
             </Card>
         </div>

@@ -52,5 +52,22 @@ namespace VECFleet.Web.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut]
+        public async Task<ActionResult> Update(Vehiculo vehiculo)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                await _vehiculoService.Update(vehiculo);
+                return Ok(vehiculo);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

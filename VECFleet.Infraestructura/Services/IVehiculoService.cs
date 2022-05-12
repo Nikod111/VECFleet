@@ -9,5 +9,6 @@ namespace VECFleet.Data.Services
         List<Vehiculo> List();
         Task<int> Create(Vehiculo user);
         Task<int> Delete(int id);
+        Task<int> Update(Vehiculo vehiculo);
     }
 }

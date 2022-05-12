@@ -15,7 +15,6 @@ namespace VECFleet.Data.Services
             _context = context;
         }
 
-        // Alta, Baja, Eliminacion
         public List<Vehiculo> List()
         {
             return _context.Vehiculos.ToList();
@@ -35,6 +34,12 @@ namespace VECFleet.Data.Services
 
             _context.Vehiculos.Remove(Vehiculo);
 
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> Update(Vehiculo vehiculo)
+        {
+            _context.Vehiculos.Update(vehiculo);
             return await _context.SaveChangesAsync();
         }
     }
