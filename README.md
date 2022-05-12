@@ -1,4 +1,4 @@
-# React - Api REST .NET 5.0
+# CRUDL React - Api REST .NET 5.0
 SPA con React que consume una Api REST .NET 5.0
 
 ## 📌 Stack
