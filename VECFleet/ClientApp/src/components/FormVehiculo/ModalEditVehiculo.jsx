@@ -13,13 +13,6 @@ const ModalEditVehiculo = ({showModal, dataModal, setUpdateList, updateList, han
         })
     }
 
-    const handleChangeTipoVehiculo = ({ target }) => {
-        setDataModal({
-            ...dataModal,
-            CantidadRuedas: target.value === "Moto" ? "2" : (target.value === "Automóvil" ? "4" : "")
-        })
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         api.updateVehiculo(dataModal).then(response => {
@@ -53,7 +46,6 @@ const ModalEditVehiculo = ({showModal, dataModal, setUpdateList, updateList, han
             <FormFieldsVehiculo 
                 data={dataModal}
                 handleChange={handleChangeModal}
-                handleChangeTipoVehiculo={handleChangeTipoVehiculo}
             />
             </Modal.Body>
             <Modal.Footer>

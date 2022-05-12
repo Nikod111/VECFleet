@@ -10,20 +10,13 @@ const NuevoVehiculo = () => {
     const history = useHistory();
 
     const [data, setData] = useState({
-        CantidadRuedas: "", Marca: "", Modelo: "", Patente: "", NumeroChasis: "", KMsRecorridos: "", KMsParaMantenimiento: ""
+        Marca: "", Modelo: "", Patente: "", NumeroChasis: "", KMsRecorridos: "", KMsParaMantenimiento: ""
     })
     
     const handleChange = ({target}) => {
         setData({
             ...data,
             [target.name]: target.value
-        })
-    }
-
-    const handleChangeTipoVehiculo = ({ target }) => {
-        setData({
-            ...data,
-            CantidadRuedas: target.value === "Moto" ? "2" : (target.value === "Automóvil" ? "4" : "")
         })
     }
 
@@ -56,7 +49,6 @@ const NuevoVehiculo = () => {
                 <FormFieldsVehiculo
                     data={data}
                     handleChange={handleChange}
-                    handleChangeTipoVehiculo={handleChangeTipoVehiculo}
                 />
                 <button className="btn btn-success">Guardar</button>
             </Form>

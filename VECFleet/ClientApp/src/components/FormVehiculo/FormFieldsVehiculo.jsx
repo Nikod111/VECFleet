@@ -11,7 +11,7 @@ const validateIsNumeric = (event) => {
     }
 }
 
-const FormFieldsVehiculo = ({ data, handleChange, handleChangeTipoVehiculo }) => {
+const FormFieldsVehiculo = ({ data, handleChange }) => {
     return(
         <div>
             <Row>
@@ -21,7 +21,6 @@ const FormFieldsVehiculo = ({ data, handleChange, handleChangeTipoVehiculo }) =>
                         className="form-control"
                         name="TipoVehiculo"
                         value={data.TipoVehiculo}
-                        onInput={handleChangeTipoVehiculo}
                         onChange={handleChange}
                         required
                     >
@@ -38,7 +37,7 @@ const FormFieldsVehiculo = ({ data, handleChange, handleChangeTipoVehiculo }) =>
                         placeholder="Se autocompleta con Tipo de vehículo"
                         maxLength="1"
                         disabled
-                        value={data.CantidadRuedas}
+                        value={!data ? "" : (data.TipoVehiculo === "Moto" ? "2" : (data.TipoVehiculo === "Automóvil" ? "4" : "")) }
                         onChange={handleChange}
                         required
                     />

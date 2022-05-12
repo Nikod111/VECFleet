@@ -7,6 +7,7 @@ export const getVehiculo = async () => {
 }
 
 export const createVehiculo = async (data) => {
+    data.CantidadRuedas = data.TipoVehiculo === "Moto" ? 2 : (data.TipoVehiculo === "Automóvil" ? 4 : 0)
     return axios.post(`${URL}/Create`, data)
 }
 
@@ -15,5 +16,6 @@ export const deleteVehiculo = async (id) => {
 }
 
 export const updateVehiculo = async (data) => {
+    data.CantidadRuedas = data.TipoVehiculo === "Moto" ? 2 : (data.TipoVehiculo === "Automóvil" ? 4 : 0)
     return axios.put(`${URL}/Update`, data)
 }
