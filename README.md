@@ -47,6 +47,14 @@ La cadena de conexión se encuentra en: .\VECFleet\appsettings.json
 	"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=VECFleetDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 
+## 📷 Capturas
+
+![crudl react](https://user-images.githubusercontent.com/3128585/167981053-9b56012c-b6a1-49ab-9ad5-3fe4b8df2b3e.png)
+![swagger](https://user-images.githubusercontent.com/3128585/167981531-55d9f9ac-f236-41c5-bbc9-367b981dee69.png)
+
+
+
 ## 🌟 Autor
 
 **Nicolás Domínguez** - [@Nikod111](https://github.com/Nikod111)
+
