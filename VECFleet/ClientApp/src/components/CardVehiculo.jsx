@@ -48,7 +48,7 @@ const CardVehiculo = ({ vehiculo, setUpdateList, updateList, handleCloseModal, h
     }
 
     return (
-        <div className="col-4 mb-3">
+        <div className="col-12 col-sm-4 mb-3">
             <Card>
                 <Card.Body>
                     <ListGroup className="mb-2">
