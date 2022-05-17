@@ -28,7 +28,7 @@ Node.js 14.17 (como mínimo)
 ### 2- Paquetes NPM
 En caso de demora al obtener los paquetes NPM desde Visual Studio
 
-Abrir la terminal en .\VECFleet\ClientApp
+Abrir la terminal en: .\VECFleet\ClientApp
 
 Ejecutar:
 
@@ -43,9 +43,11 @@ En Visual Studio abrir la instancia de base de datos y ejecutar el script que se
 
 La cadena de conexión se encuentra en: .\VECFleet\appsettings.json
 
+```
 "ConnectionStrings": {
 	"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=VECFleetDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+```
 
 ## 📷 Capturas
 
@@ -55,4 +57,3 @@ La cadena de conexión se encuentra en: .\VECFleet\appsettings.json
 ## 🌟 Autor
 
 **Nicolás Domínguez** - [@Nikod111](https://github.com/Nikod111)
-
